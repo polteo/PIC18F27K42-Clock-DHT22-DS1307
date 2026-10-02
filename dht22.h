@@ -12,15 +12,13 @@
 #include <stdint.h>
 #include "config.h"
 
-#define DHT22_MAX_TRIES     100
-#define DHT22_TIMEOUT       1000    // microseconds
+#define DHT22_TIMEOUT       100     // microseconds per edge wait
 
-volatile float dht22_temperature;
-volatile float dht22_humidity;
+extern volatile float dht22_temperature;
+extern volatile float dht22_humidity;
 
 void dht22_init(void);
-void dht22_read_data(void);
-void dht22_delay_us(uint16_t us);
+uint8_t dht22_read_data(void);      // returns 1 on success, 0 on error
 uint8_t dht22_read_byte(void);
 
 #endif // DHT22_H

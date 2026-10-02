@@ -2,7 +2,7 @@
  * File:   alarm.h
  * Author: polteo
  * 
- * Alarm and Buzzer Control Header
+ * Alarm and Buzzer Control Header (buzzer pin is defined in config.h)
  */
 
 #ifndef ALARM_H
@@ -12,13 +12,9 @@
 #include <stdint.h>
 #include "config.h"
 
-#define BUZZER_PORT     PORTB
-#define BUZZER_TRIS     TRISB
-#define BUZZER_PIN      3       // RB3
-
-volatile uint8_t alarm_hour;
-volatile uint8_t alarm_minute;
-volatile uint8_t alarm_enabled;
+extern volatile uint8_t alarm_hour;
+extern volatile uint8_t alarm_minute;
+extern volatile uint8_t alarm_enabled;
 
 void alarm_init(void);
 void alarm_on(void);
