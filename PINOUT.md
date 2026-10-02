@@ -13,7 +13,7 @@ the register names (oscillator, Timer0, interrupt registers) and is not part of 
 | 24 | RB3 | Buzzer (active, via transistor) | buzzer + | `BUZZER_*` |
 | 25 | RB4 | Button: alarm on/off | to GND (internal pull-up) | `BTN_ALARM_*` |
 | 26 | RB5 | Button: stop buzzer | to GND (internal pull-up) | `BTN_STOP_*` |
-| 18 | RC3 | DS1307 SDA (software I2C) | DS1307 SDA (pin 5) + 4.7k pull-up | `I2C_SDA_*` |
+| 14 | RC3 | DS1307 SDA (software I2C) | DS1307 SDA (pin 5) + 4.7k pull-up | `I2C_SDA_*` |
 | 15 | RC4 | DS1307 SCL (software I2C) | DS1307 SCL (pin 6) + 4.7k pull-up | `I2C_SCL_*` |
 | 1  | MCLR | Reset | 10k to VDD / programmer | – |
 | 20 / 8,19 | VDD / VSS | Power | 5 V (or 3.3 V) / GND, 100 nF decoupling | – |
